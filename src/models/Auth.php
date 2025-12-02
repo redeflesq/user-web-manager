@@ -53,8 +53,8 @@ class Auth
 	{
 		if ($this->isLoggedIn()) {
 			return [
-				'id' => $_SESSION['admin_id'],
-				'username' => $_SESSION['admin_username']
+				'id' => $this->app->session()->getVariable('admin_id'),
+				'username' => $this->app->session()->getVariable('admin_username')
 			];
 		}
 		
