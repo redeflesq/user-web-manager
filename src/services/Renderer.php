@@ -28,10 +28,10 @@ class Renderer
 		include $file;
 	}
 	
-	public function die_render($controller, $view, $lang = '')
+	public function die_render($controller, $view)
 	{
 		// Render a view and terminate the script immediately
-		$this->render($controller, $view, $lang);
+		$this->render($controller, $view);
 		die();
 	}
 
